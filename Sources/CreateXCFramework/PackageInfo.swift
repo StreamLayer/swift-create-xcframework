@@ -147,7 +147,7 @@ struct PackageInfo {
 
         // check the graph for binary targets
         let binary = self.graph.allTargets.filter { $0.type == .binary }
-        if binary.isEmpty == false {
+        if binary.isEmpty == false && !self.options.ignoreBinaryTargetsError {
             errors.append(.containsBinaryTargets(binary.map(\.name)))
         }
 

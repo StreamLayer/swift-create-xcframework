@@ -30,6 +30,9 @@ extension Command {
 
         @Flag(inversion: .prefixedNo, help: "Whether to include debug symbols in the built XCFramework")
         var debugSymbols = true
+      
+        @Flag(help: "Ignore binary targets error")
+        var ignoreBinaryTargetsError = false
 
         @Flag(help: "Prints the available products and targets")
         var listProducts = false
